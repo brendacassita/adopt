@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  image: MyString
+  species: MyString
+  description: MyText
+  minimum_donation: 1.5
+  adopted: false
+  belongs_to: 
+
+two:
+  name: MyString
+  image: MyString
+  species: MyString
+  description: MyText
+  minimum_donation: 1.5
+  adopted: false
+  belongs_to: 

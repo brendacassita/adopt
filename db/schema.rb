@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_24_213423) do
+ActiveRecord::Schema.define(version: 2022_04_08_210755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adopted_pets", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "pet_id", null: false
+    t.float "adopted_price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pet_id"], name: "index_adopted_pets_on_pet_id"
+    t.index ["user_id"], name: "index_adopted_pets_on_user_id"
+  end
+
+  create_table "liked_pets", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "pet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pet_id"], name: "index_liked_pets_on_pet_id"
+    t.index ["user_id"], name: "index_liked_pets_on_user_id"
+  end
+
+  create_table "pets", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "species"
+    t.text "description"
+    t.float "minimum_donation"
+    t.boolean "adopted"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_pets_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
@@ -45,4 +77,9 @@ ActiveRecord::Schema.define(version: 2022_03_24_213423) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "adopted_pets", "pets"
+  add_foreign_key "adopted_pets", "users"
+  add_foreign_key "liked_pets", "pets"
+  add_foreign_key "liked_pets", "users"
+  add_foreign_key "pets", "users"
 end

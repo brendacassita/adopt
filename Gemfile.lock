@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: a7cbf1b5e8caa0d537faef57c00958767b2be59f
+  branch: master
+  specs:
+    faker (2.20.0)
+      i18n (>= 1.8.11, < 2)
+
+GIT
   remote: https://github.com/lynndylanhurley/devise_token_auth
   revision: 798255ee7e3fee5cfa2fdc519fd90e281bd9b6f5
   specs:
@@ -103,6 +111,8 @@ GEM
     minitest (5.15.0)
     msgpack (1.4.5)
     nio4r (2.5.8)
+    nokogiri (1.13.3-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.3-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -170,6 +180,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-20
   x86_64-darwin-21
 
@@ -177,6 +188,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise_token_auth (>= 1.2.0)!
+  faker!
   listen (~> 3.3)
   pg (~> 1.1)
   pry-rails
