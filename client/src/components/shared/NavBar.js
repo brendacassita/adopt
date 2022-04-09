@@ -55,6 +55,7 @@ const NavBar = () => {
     );
   };
   const renderCenterNav = () => {
+    if (auth.user) {
     return (
       <>
         <Badge>
@@ -64,7 +65,9 @@ const NavBar = () => {
         </Badge>
       </>
     );
+    }
   };
+  
   const renderCenterNav1 = () => {
     return (
       <>
@@ -119,14 +122,33 @@ const NavBar = () => {
       </>
     );
 
+
+
     
   };
+
+  const renderCenterNav5 = () => {
+    if (auth.user) {
+      return (
+        <>
+        <Badge>
+          <Link to="/list_pet" style={{ color: "white" }}>
+            List A Pet {" "}
+          </Link>
+        </Badge>
+        </>
+      );
+    }
+    return (
+      <>
+      </>
+    );
+  }
   return (
     <div>
       <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">Starter App</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbar-dark-example" />
+          <Navbar.Brand href="/">Adopt</Navbar.Brand>
 
           <NavDropdown
             id="nav-dropdown-dark-example"
@@ -145,6 +167,7 @@ const NavBar = () => {
             <NavDropdown.Item>{renderCenterNav2()}</NavDropdown.Item>
             <NavDropdown.Item>{renderCenterNav3()}</NavDropdown.Item>
             <NavDropdown.Item>{renderCenterNav4()}</NavDropdown.Item>
+            <NavDropdown.Item>{renderCenterNav5()}</NavDropdown.Item>
 
 
 

@@ -17,6 +17,8 @@ import NavBar from './components/shared/NavBar';
 import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Feed from './components/auth/Feed';
+import ListPet from './components/auth/ListPet';
+
 import FindPets from './components/shared/Species';
 import LikedPets from './components/auth/LikedPets';
 import AdoptedPets from './components/shared/AdoptedPets';
@@ -35,7 +37,7 @@ function App() {
          <Route path='/login' element={<Login/>}/>
          <Route path='/register' element={<Register/>}/>
           <Route path='/' element={<Home/>}/>
-          <Route path='/all_pets' element={<AllPets/>}/>
+          
           <Route path='/find_pets' element={<FindPets/>}/>
           <Route path='/adopted_pets' element={<AdoptedPets/>}/>
           <Route path='/about' element={<About/>}/>
@@ -46,8 +48,11 @@ function App() {
 
           {/* PROTECTED */}
         <Route element={<ProtectedRoute/>}>
+          <Route path='/all_pets' element={<AllPets/>}/>
           <Route path='/feed' element={<Feed/>}/>
           <Route path='/liked_pets' element={<LikedPets/>}/>
+          <Route path='/list_pet' element={<ListPet/>}/>
+
 
        </Route>
 
