@@ -106,9 +106,12 @@ const AllPets = () => {
   
               <p>{pet.description}</p>
               <br/>
-  
+            <section>
             <Button onClick={() => like(pet.id)}>Like</Button>
-              
+            <br/>
+            <br/>
+            <Button bg='danger' onClick={() => removePetFromUI(pet.id)}>Next</Button>
+             </section>
             </div>
           </Card>
            </>
