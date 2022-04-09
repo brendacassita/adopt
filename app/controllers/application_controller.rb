@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
         protected
 
         def configure_permitted_parameters
-                updated_attrib = [:name]
+                updated_attrib = [:name, :liked_pets]
                 added_attrib = []
                 devise_parameter_sanitizer.permit :sign_up, keys: added_attrib
                 devise_parameter_sanitizer.permit :account_update, keys: updated_attrib
