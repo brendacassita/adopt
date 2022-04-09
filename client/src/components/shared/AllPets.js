@@ -84,6 +84,7 @@ const AllPets = () => {
   if (pet) {
   
        return (
+
            <>
              <Card key={pet.id} style={{textAlign: 'center', flex:'justify-content'}}> 
             <div>
