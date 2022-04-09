@@ -46,6 +46,7 @@ end
   end
 
   def update_liked
+    puts current_user.liked_pets
     current_user.liked_pets.push(params[:id].to_i)
     current_user.save
   end

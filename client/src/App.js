@@ -17,7 +17,7 @@ import NavBar from './components/shared/NavBar';
 import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Feed from './components/auth/Feed';
-import FindPets from './components/shared/FindPets';
+import FindPets from './components/shared/Species';
 import LikedPets from './components/auth/LikedPets';
 import AdoptedPets from './components/shared/AdoptedPets';
 import About from './components/shared/About';

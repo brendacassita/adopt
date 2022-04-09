@@ -16,7 +16,7 @@ User.destroy_all
 2.times do
     name = Faker::FunnyName.name
     species = Faker::Creature::Animal.name 
-    image = Faker::Avatar.image(slug: name, size: '100x400', format: 'png', set: 'set4')
+    image = Faker::Avatar.image(slug: name, size: '200x400', format: 'png', set: 'set1')
     adopted = Faker::Boolean.boolean
     description = "#{name} is a great #{species} and is #{Faker::Number.digit} years old."
     Pet.create(name: name, image: image, adopted: adopted, species: species, description: description, user_id: u.id)

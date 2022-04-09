@@ -5,4 +5,5 @@ class Pet < ApplicationRecord
     has_many :adopted_pets
     has_many :users, through: :adopted_pets
 
+
 end
