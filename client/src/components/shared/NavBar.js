@@ -125,7 +125,7 @@ const NavBar = () => {
     <div>
       <Navbar sticky="top" variant="dark" bg="dark" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">Starter App</Navbar.Brand>
+          <Navbar.Brand href="/">Adopt</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-dark-example" />
 
           <NavDropdown

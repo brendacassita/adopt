@@ -17,11 +17,13 @@ class User < ActiveRecord::Base
 
     def self.unliked_pets(ids)
       ids = ids.empty ? [0] : ids
-      Pet.where("ID not in (?)", ids).order("random(")
+      unliked = ids.map {|id| id.pet_id}
+      Pet.where("ID not in (?)", unliked).order("random(")
     end
 
     def self.liked(ids)
       ids = ids.empty? ? [0] : ids
-      Pet.where("id IN (?)", ids)
+      liked = ids.map {|id| id.pet_id}
+      Pet.where("id IN (?)", liked)
     end
 end
