@@ -59,7 +59,7 @@ const NavBar = () => {
       <>
         <Badge>
           <Link to="/all_pets" style={{ color: "white" }}>
-            Browse Pets {" "}
+            All Pets {" "}
           </Link>
         </Badge>
       </>
