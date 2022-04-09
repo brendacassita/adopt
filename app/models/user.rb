@@ -13,4 +13,15 @@ class User < ActiveRecord::Base
     has_many :adopted_pets, dependent: :destroy
     has_many :pets, through: :adopted_pets
 
+    serialize :liked_pets, Array
+
+    def self.unliked_pets(ids)
+      ids = ids.empty ? [0] : ids
+      Pet.where("ID not in (?)", ids).order("random(")
+    end
+
+    def self.liked(ids)
+      ids = ids.empty? ? [0] : ids
+      Pet.where("id IN (?)", ids)
+    end
 end
