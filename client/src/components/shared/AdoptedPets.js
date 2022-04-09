@@ -17,7 +17,7 @@ const AdoptedPets = () => {
       setAdoptedPets(res.data);
       console.log(res.data);
     } catch (error) {
-      alert("error getting adopted pets");
+      alert("Error getting adopted pets.");
     }
   };
 
