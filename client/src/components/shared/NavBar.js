@@ -70,7 +70,7 @@ const NavBar = () => {
       <>
         <Badge>
           <Link to="/find_pets" style={{ color: "white" }}>
-            Find Pets {" "}
+            Species {" "}
           </Link>
         </Badge>
       </>
