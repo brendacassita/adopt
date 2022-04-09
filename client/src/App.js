@@ -9,6 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import Home from './components/shared/Home';
+import AllPets from './components/shared/AllPets';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import NoMatch from './components/shared/NoMatch';
@@ -16,6 +17,10 @@ import NavBar from './components/shared/NavBar';
 import FetchUser from './components/auth/FetchUser';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Feed from './components/auth/Feed';
+import FindPets from './components/shared/FindPets';
+import LikedPets from './components/auth/LikedPets';
+import AdoptedPets from './components/shared/AdoptedPets';
+import About from './components/shared/About';
 
 
 function App() {
@@ -30,10 +35,20 @@ function App() {
          <Route path='/login' element={<Login/>}/>
          <Route path='/register' element={<Register/>}/>
           <Route path='/' element={<Home/>}/>
+          <Route path='/all_pets' element={<AllPets/>}/>
+          <Route path='/find_pets' element={<FindPets/>}/>
+          <Route path='/adopted_pets' element={<AdoptedPets/>}/>
+          <Route path='/about' element={<About/>}/>
+
+
+
+
 
           {/* PROTECTED */}
         <Route element={<ProtectedRoute/>}>
           <Route path='/feed' element={<Feed/>}/>
+          <Route path='/liked_pets' element={<LikedPets/>}/>
+
        </Route>
 
 
