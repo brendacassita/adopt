@@ -12,7 +12,7 @@ def index_liked
 end
 
 def my_pets
-  liked_cats_ids = current_user.liked_pets
+  liked_pets_ids = current_user.liked_pets
   render json: User.liked(liked_pets_ids)
 end
 
