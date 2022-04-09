@@ -31,9 +31,11 @@ const AllPets = () => {
               <h1>{p.name}</h1>
             </Badge>
             <br/>
+            <br/>
 
-            <Badge bg="info">
-              <p>{p.species}</p>
+
+            <Badge bg="info" >
+              <h6 style={{marginBottom: '0px'}}>{p.species}</h6>
             </Badge>
             <br/>
 
