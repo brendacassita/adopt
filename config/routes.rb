@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
 
     get 'my_pets', to:'pets#my_pets'
+    get 'adopted_pets', to: 'pets#adopted_pets'
     resources :pets 
     resources :liked_pets 
 

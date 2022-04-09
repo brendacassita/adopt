@@ -6,6 +6,10 @@ def index
   render json: Pet.all
 end
 
+def adopted_pets
+  render json: Pet.where(adopted: true)
+end
+
 def index_liked
   liked_pets_ids = current_user.liked_pets
   render json: User.unliked_pets(liked_pets_ids)
